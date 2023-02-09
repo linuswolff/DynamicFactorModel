@@ -9,6 +9,8 @@
 
 forecastDFM <- function(X, variable, r, p) {
   library(dplyr)
+  library(vars)
+  
   X_mat <- as.matrix(X)
   n <- ncol(X_mat)
   t <- nrow(X_mat)
@@ -43,7 +45,7 @@ forecastDFM <- function(X, variable, r, p) {
   
   # 2. VAR model for factors
   
-  factorVAR <- VAR(F_hat, ic = "AIC", type = "none")
+  factorVAR <- vars::VAR(F_hat, ic = "AIC", type = "none")
   fcst_F_1step <- predict(factorVAR, n.ahead = 1)
   fcst_Fplus1 <- c()
   for (i in 1:r) {
