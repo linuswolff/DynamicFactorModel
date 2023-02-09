@@ -9,7 +9,7 @@ library(devtools)
 install_github("linuswolff/DynamicFactorModel")
 ```
 
-The package has three functions. The first estimates a DFM of $\boldsymbol\X$ and forecasts the desired variable, allowing for modification of the number of factors. Criteria for estimating the number of factors as proposed in Bai and Ng (2002) are offered by another. The last performs out of sample forecasts for a desired length of periods. Their documentation can be accessed by using 
+The package has three functions. The first estimates a DFM of ** $X$ ** and forecasts the desired variable, allowing for modification of the number of factors. Criteria for estimating the number of factors as proposed in Bai and Ng (2002) are offered by another. The last performs out of sample forecasts for a desired length of periods. Their documentation can be accessed by using 
 
 ```R
 ?forecastDFM
